@@ -1,4 +1,4 @@
-package com.livetechstudy.hibernate.library;
+package com.livetechstudy.hibernate.library.entity;
 
 public class Book {
 	private String bookId;
