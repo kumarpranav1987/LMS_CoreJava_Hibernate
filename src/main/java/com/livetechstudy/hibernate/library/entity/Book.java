@@ -1,6 +1,13 @@
 package com.livetechstudy.hibernate.library.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="books")
 public class Book {
+	@Id
 	private String bookId;
 	private String bookTitle;
 	private String author;
