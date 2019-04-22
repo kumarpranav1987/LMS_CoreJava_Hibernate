@@ -4,8 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Proxy;
+
 //@Entity
 //@Table(name="books")
+//@Proxy(lazy=false)
 public class Book {
 	//@Id
 	private String bookId;

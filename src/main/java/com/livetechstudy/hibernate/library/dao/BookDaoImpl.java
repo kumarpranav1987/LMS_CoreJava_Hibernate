@@ -61,10 +61,22 @@ public class BookDaoImpl implements BookDao {
 	@Override
 	public Book findBookByID(String bookID) {
 		Book result = null;
+		Transaction transaction = null;
 		try (Session session = HibernateSessionFactory.getSessionFactory().openSession()) {
-			result = session.createQuery("from Book where bookId=:id", Book.class).setParameter("id", bookID)
-					.getSingleResult();
+			transaction = session.beginTransaction();
+			//Load throws runtime exception if object not found with give ID
+			//result = session.load(Book.class, bookID);
+			
+			//get returns null if object not found with give ID
+			result = session.get(Book.class, bookID);
+			
+			
+			/*result = session.createQuery("from Book where bookId=:id", Book.class).setParameter("id", bookID)
+					.getSingleResult();*/
+			
+			transaction.commit();
 		} catch (Exception e) {
+			e.printStackTrace();
 		}
 		return result;
 	}
