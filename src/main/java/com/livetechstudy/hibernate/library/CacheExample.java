@@ -6,7 +6,7 @@ import org.hibernate.Transaction;
 import com.livetechstudy.hibernate.library.dao.HibernateSessionFactory;
 import com.livetechstudy.hibernate.library.entity.Book;
 
-public class FirstLevelCacheExample {
+public class CacheExample {
 
 	public static void main(String[] args) {
 		Session firstSession = HibernateSessionFactory.getSessionFactory().openSession();

@@ -6,6 +6,15 @@
 <hibernate-configuration>
 
 	<session-factory>
+		<!-- Second Level Cache -->
+		<!-- <property name="hibernate.cache.use_second_level_cache">true</property>
+		<property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property> -->
+		
+		<!-- Query Caching -->
+		<!-- <property name="hibernate.cache.use_query_cache">true</property> -->
+		
+		
+		
 		<property name="hbm2ddl.auto">update</property>
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
 		<property name="connection.url">jdbc:mysql://10.101.160.237/library_hibernate?useSSL=false</property>

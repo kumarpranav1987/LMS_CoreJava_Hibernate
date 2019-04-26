@@ -6,13 +6,15 @@
 <hibernate-mapping>
 	<!-- <class name="com.livetechstudy.hibernate.library.entity.Book" table="books" lazy="false"> -->
 	<class name="com.livetechstudy.hibernate.library.entity.Book" table="books">
+		<!-- Second Level Caching -->
+		<!-- <cache usage="read-write"/> -->
+		
 		<id name="bookId">
 			<generator class="assigned"></generator>
 		</id>
 
 		<property name="bookTitle"></property>
 		<property name="author"></property>
-
 	</class>
 
 </hibernate-mapping>
